@@ -1,0 +1,36 @@
+﻿@model English_Idioms.Models.Idioms
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Idioms</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Idiom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Idiom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.definition)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.definition)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Example)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Example)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
